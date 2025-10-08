@@ -1,6 +1,8 @@
 from telegram import Update
 from telegram.ext import Updater, CommandHandler
 
+
+
 # /start
 def start(update: Update, context):
     update.message.reply_text(
@@ -91,7 +93,7 @@ def mapa(update: Update, context):
 
 # Inicializador do bot
 def main():
-    token = "***REMOVED***"
+    token = "7547878261:AAHVkiLFz6o0wd2nck7tQ8g2p24hB7U-n2s"
 
     updater = Updater(token)
     dispatcher = updater.dispatcher
@@ -125,6 +127,14 @@ def main():
 # Executa o bot
 if __name__ == '__main__':
     main()
+
+import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
+TOKEN = os.getenv("TELEGRAM_TOKEN")
 
 
 
